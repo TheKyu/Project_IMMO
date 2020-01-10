@@ -1,0 +1,217 @@
+#navbarSupportedContent .rounded-circle{
+    width: 35%!important;
+    float: right;
+}
+
+@media all and (max-width: 991px) {
+    #navbarSupportedContent .rounded-circle {
+        width: 13% !important;
+    }
+}
+
+a.test{text-decoration:none;}
+a:link {text-decoration: none;color: white}
+a:visited {text-decoration: none;color: white}
+a:hover {text-decoration: none;color: white}
+a:active {text-decoration: none;color: white}
+
+#navbarSupportedContent1 .nav-item {
+    margin: 15px 50px;
+}
+
+.compte a:link{
+    text-decoration: underline darkgray;!important;
+    color: white;!important;
+}
+.compte a:visited{
+    text-decoration: underline darkgray;!important;
+    color: white;!important;
+}
+.compte a:hover {
+    text-decoration: underline darkgray;!important;
+    color: white;!important;
+}
+.compte a:active {
+    text-decoration: underline darkgray;!important;
+    color: white;!important;
+}
+#maps {
+    width: 150%;
+    height: 450px;
+}
+
+#maps1 {
+    width: 150%;
+    height: 450px;
+}
+
+#corploca {
+    margin-left: 0;!important;
+    margin-right: 0;!important;
+}
+.row{
+    margin-left: 0;!important;
+    margin-right: 0;!important;
+}
+
+#lieux{
+    size: 600px;!important;
+}
+
+
+
+/*1er checkbox image pièce*/
+#thing0[type=checkbox] {
+    display:none;
+}
+
+#thing0[type=checkbox] + label {
+    background-image: url("../image/1nck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+#thing0[type=checkbox]:checked + label {
+    background-image: url("../image/1ck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/*2eme checkbox image pièce*/
+#thing1[type=checkbox] {
+    display:none;
+}
+
+#thing1[type=checkbox] + label {
+    background-image: url("../image/2nck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+#thing1[type=checkbox]:checked + label {
+    background-image: url("../image/2ck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+/*3eme checkbox image pièce*/
+#thing2[type=checkbox] {
+    display:none;
+}
+
+#thing2[type=checkbox] + label {
+    background-image: url("../image/3nck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+#thing2[type=checkbox]:checked + label {
+    background-image: url("../image/3ck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/*4eme checkbox image pièce*/
+#thing3[type=checkbox] {
+    display:none;
+}
+
+#thing3[type=checkbox] + label {
+    background-image: url("../image/4nck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+#thing3[type=checkbox]:checked + label {
+    background-image: url("../image/4ck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+/*5eme checkbox image pièce*/
+#thing4[type=checkbox] {
+    display:none;
+}
+
+#thing4[type=checkbox] + label {
+    background-image: url("../image/5nck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+#thing4[type=checkbox]:checked + label {
+    background-image: url("../image/5ck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+/*6eme checkbox image pièce*/
+#thing5[type=checkbox] {
+    display:none;
+}
+
+#thing5[type=checkbox] + label {
+    background-image: url("../image/6nck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+#thing5[type=checkbox]:checked + label {
+    background-image: url("../image/6ck.jpg");
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+
+/*------------------------
+        PAGINATION
+------------------------*/
+.pagination {
+    padding-top: 30px;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+.pagination__link {
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    margin: 0 10px;
+    border: 2px red solid;
+    font-family: "Dosis", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 52px;
+    color: red;
+}
+.pagination__link:hover, .pagination__link--active {
+    border-color: black;
+    background-color: red;
+    color: black;
+}
+.pagination a:link, a:visited, a:hover, a:active {
+    color: black;!important;
+}

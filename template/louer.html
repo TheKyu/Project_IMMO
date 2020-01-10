@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="../library/image/logo.jpg"/>
+    <link rel="stylesheet" href="../library/CSS/louer.css">
+    <title>ImmoEasy - Location</title>
+</head>
+<body>
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="../library/image/logo2.jpg" class="d-inline-block align-top" alt="logo">
+            ImmoEasy
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Accueil</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="louer.html">Louer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="acheter.html">Acheter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vendre.html">Vendre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+            <form class="form-inline mx-3">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <div class="compte">
+                <a href="../template/creacompte.html" class="mx-2">Créer un compte</a>
+            </div>
+            <div class="compte">
+                <a href="../template/login.html" class="mx-2">Se connecter</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<div id="corploca" class="row">
+    <div class="col-3" id="rechercherbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+                    aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent2">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <label for="lieux"></label>
+                        <input type="text" placeholder="Lieux" id="lieux">
+                    </li>
+                    <li class="nav-item mb-2">
+                        <label for="surface"></label>
+                        <input type="text" placeholder="Surface" id="surface">
+                    </li>
+                    <li class="nav-item mb-2">
+                        <label for="prixMax"></label>
+                        <input type="text" placeholder="Prix Max" id="prixMax">
+                    </li>
+                    <!--DropDown critères-->
+                    <li>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
+                                            Amménagements
+                                        </button>
+                                    </h2>
+                                </div>
+                                <!--1er DropDown-->
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <!-- Default inline 1-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline">
+                                                <label class="custom-control-label" for="defaultInline">Garage</label>
+                                            </div>
+
+                                            <!-- Default inline 2-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline0">
+                                                <label class="custom-control-label" for="defaultInline0">Balcon</label>
+                                            </div>
+                                            <!-- Default inline 3-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                                                <label class="custom-control-label" for="defaultInline1">Placard</label>
+                                            </div>
+
+                                            <!-- Default inline 4-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline2">
+                                                <label class="custom-control-label" for="defaultInline2">Accès
+                                                    handicapés</label>
+                                            </div>
+                                            <!-- Default inline 5-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline3">
+                                                <label class="custom-control-label" for="defaultInline3">Parking</label>
+                                            </div>
+
+                                            <!-- Default inline 6-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline4">
+                                                <label class="custom-control-label" for="defaultInline4">Jardin</label>
+                                            </div>
+                                            <!-- Default inline 7-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline5">
+                                                <label class="custom-control-label"
+                                                       for="defaultInline5">Interphone</label>
+                                            </div>
+
+                                            <!-- Default inline 8-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline6">
+                                                <label class="custom-control-label"
+                                                       for="defaultInline6">Ascenseur</label>
+                                            </div>
+                                            <!-- Default inline 9-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline7">
+                                                <label class="custom-control-label" for="defaultInline7">Gardien</label>
+                                            </div>
+
+                                            <!-- Default inline 10-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline8">
+                                                <label class="custom-control-label" for="defaultInline8">Meublé</label>
+                                            </div>
+                                            <!-- Default inline 11-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="defaultInline9">
+                                                <label class="custom-control-label"
+                                                       for="defaultInline9">Cheminée</label>
+                                            </div>
+
+                                            <!-- Default inline 12-->
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input"
+                                                       id="defaultInline10">
+                                                <label class="custom-control-label"
+                                                       for="defaultInline10">Colocation</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--2ème DropDown-->
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                    data-target="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">
+                                                Nombre de pièces
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                         data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <input type='checkbox' name='thing' value='valuable' id="thing0"/><label
+                                                for="thing0"></label>
+                                            <input type='checkbox' name='thing' value='valuable' id="thing1"/><label
+                                                for="thing1"></label>
+                                            <input type='checkbox' name='thing' value='valuable' id="thing2"/><label
+                                                for="thing2"></label>
+                                            <input type='checkbox' name='thing' value='valuable' id="thing3"/><label
+                                                for="thing3"></label>
+                                            <input type='checkbox' name='thing' value='valuable' id="thing4"/><label
+                                                for="thing4"></label>
+                                            <input type='checkbox' name='thing' value='valuable' id="thing5"/><label
+                                                for="thing5"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--3eme DropDown-->
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                                    data-target="#collapseThree" aria-expanded="false"
+                                                    aria-controls="collapseThree">
+                                                Autres pièces
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                         data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            lol
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container row col-9">
+        <div class="col-5 my-3">
+            <!-- Button trigger modal -->
+            <p data-toggle="modal" id="btnmaison" data-target="#exampleModal">
+                <img src="../library/image/maison_mini.jpg" alt="">
+            </p>
+            <!-- Button trigger modal -->
+            <p data-toggle="modal" id="btnmaison0" data-target="#exampleModal">
+                <img src="../library/image/maison_mini.jpg" alt="">
+            </p>
+            <!-- Button trigger modal -->
+           <p data-toggle="modal" id="btnmaison1" data-target="#exampleModal">
+                <img src="../library/image/maison_mini.jpg" alt="">
+            </p>
+        </div>
+
+        <div class="col-4 ml-5">
+            <div id="maps" class="my-3">
+
+            </div>
+            <div id="maps1" class="my-3">
+
+            </div>
+        </div>
+    </div>
+
+<div class="pagination mx-auto mb-2">
+    <span class="pagination__link pagination__link--active">1</span>
+    <a href="#" class="pagination__link">2</a>
+    <a href="#" class="pagination__link">3</a>
+    <a href="#" class="pagination__link">
+        <i class="fa fa-chevron-right">></i>
+    </a>
+</div>
+</div>
+
+<footer>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+                aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <!-- Button trigger modal Condition general des ventes-->
+                    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#cgv">
+                        Condition générales des ventes
+                    </button>
+                <li class="nav-item">
+                    <!-- Button trigger modal mention legale-->
+                    <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#ml">
+                        Mentions Légales
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.facebook.com" target="_blank"><img src="../library/image/logofb.jpg"
+                                                                            alt="logo_facebook"
+                                                                            class="rounded-circle"></a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.twitter.com" target="_blank"><img src="../library/image/logotwitter.jpg"
+                                                                           alt="logo_twitter"
+                                                                           class="rounded-circle"></a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.tumblr.com" target="_blank"><img src="../library/image/logotumblr.jpg"
+                                                                          alt="logo_tumblr" class="rounded-circle"></a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+</footer>
+
+<!-- Modal annoce-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Maison 1</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>info</p>
+                <p>info</p>
+                <p>info</p>
+                <p>info</p>
+                <p>info</p>
+                <p>info</p>
+                <p>info</p>
+                <div class="button">
+                    <button type="button" onclick="toggle_div(this,'maison0');">En savoir plus</button>
+                    <div id="maison0" style="display:none;">
+                        <p>maison maison</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger">Prendre rendez-vous</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal  condition general des ventes-->
+<div class="modal fade" id="cgv" tabindex="-1" role="dialog" aria-labelledby="cgv" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cgvtittle">Condition générales des ventes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Suspendisse sed nisi lacus sed viverra tellus. Nibh cras pulvinar mattis nunc
+                    sed
+                    blandit libero volutpat sed. Id diam maecenas ultricies mi eget mauris. Mauris vitae ultricies leo
+                    integer malesuada nunc vel. Urna nunc id cursus metus aliquam. Sed risus ultricies tristique nulla.
+                    In
+                    hendrerit gravida rutrum quisque non tellus. Pretium nibh ipsum consequat nisl vel pretium lectus
+                    quam
+                    id. Luctus venenatis lectus magna fringilla. Egestas purus viverra accumsan in nisl. Ut venenatis
+                    tellus
+                    in metus vulputate eu. Ipsum consequat nisl vel pretium lectus. Suspendisse interdum consectetur
+                    libero
+                    id faucibus nisl tincidunt. Donec enim diam vulputate ut pharetra sit. Egestas tellus rutrum tellus
+                    pellentesque eu tincidunt tortor.
+
+                    Turpis cursus in hac habitasse. Nibh ipsum consequat nisl vel pretium lectus. Etiam erat velit
+                    scelerisque in dictum non consectetur. Vel fringilla est ullamcorper eget nulla. Tempor orci eu
+                    lobortis
+                    elementum nibh tellus molestie nunc. Turpis tincidunt id aliquet risus feugiat. Adipiscing bibendum
+                    est
+                    ultricies integer quis auctor elit sed vulputate. Nulla aliquet porttitor lacus luctus accumsan
+                    tortor
+                    posuere ac. Vitae purus faucibus ornare suspendisse sed. Feugiat scelerisque varius morbi enim nunc
+                    faucibus. Lacus viverra vitae congue eu consequat ac felis. Libero justo laoreet sit amet cursus.
+                    Mauris
+                    nunc congue nisi vitae suscipit tellus mauris a.
+
+                    Pulvinar pellentesque habitant morbi tristique senectus. Sit amet nisl suscipit adipiscing bibendum
+                    est
+                    ultricies integer quis. Tellus mauris a diam maecenas sed enim ut. Lorem ipsum dolor sit amet
+                    consectetur adipiscing elit duis. Quam pellentesque nec nam aliquam sem et tortor consequat id.
+                    Hendrerit gravida rutrum quisque non tellus orci ac auctor. Nulla porttitor massa id neque aliquam
+                    vestibulum morbi blandit. Est sit amet facilisis magna etiam tempor orci eu. Quis blandit turpis
+                    cursus
+                    in hac habitasse platea dictumst. Urna porttitor rhoncus dolor purus. Fringilla est ullamcorper eget
+                    nulla facilisi etiam dignissim diam. Sit amet justo donec enim diam vulputate ut pharetra. Sit amet
+                    justo donec enim diam vulputate ut. Scelerisque viverra mauris in aliquam sem fringilla ut. Nibh sit
+                    amet commodo nulla facilisi nullam vehicula. Euismod in pellentesque massa placerat duis ultricies
+                    lacus. Quis vel eros donec ac odio tempor orci dapibus. Amet facilisis magna etiam tempor orci eu.
+
+                    Mi quis hendrerit dolor magna eget est. Id aliquet risus feugiat in ante. Enim ut sem viverra
+                    aliquet
+                    eget sit amet. Nisi vitae suscipit tellus mauris a diam. In pellentesque massa placerat duis
+                    ultricies
+                    lacus. Orci porta non pulvinar neque laoreet. Adipiscing elit duis tristique sollicitudin nibh sit
+                    amet
+                    commodo. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Adipiscing enim eu
+                    turpis egestas pretium aenean pharetra. Semper auctor neque vitae tempus quam.
+
+                    Mattis molestie a iaculis at erat pellentesque. Ut faucibus pulvinar elementum integer enim neque
+                    volutpat. Nulla aliquet enim tortor at. Egestas maecenas pharetra convallis posuere morbi. Semper
+                    eget
+                    duis at tellus at urna condimentum. Amet volutpat consequat mauris nunc. Suspendisse sed nisi lacus
+                    sed
+                    viverra tellus in. Lectus arcu bibendum at varius vel pharetra. Vitae elementum curabitur vitae nunc
+                    sed
+                    velit dignissim. Eu turpis egestas pretium aenean pharetra magna. Amet luctus venenatis lectus magna
+                    fringilla urna.
+
+                    Arcu bibendum at varius vel pharetra vel turpis nunc. Cursus eget nunc scelerisque viverra mauris
+                    in.
+                    Rhoncus urna neque viverra justo nec ultrices dui. Malesuada bibendum arcu vitae elementum curabitur
+                    vitae. Posuere lorem ipsum dolor sit. Montes nascetur ridiculus mus mauris vitae ultricies leo. Eros
+                    in
+                    cursus turpis massa. Eget nunc lobortis mattis aliquam faucibus. Adipiscing elit ut aliquam purus
+                    sit
+                    amet luctus. Malesuada proin libero nunc consequat interdum varius sit amet. Pellentesque nec nam
+                    aliquam sem et tortor consequat id. Placerat vestibulum lectus mauris ultrices eros. Imperdiet dui
+                    accumsan sit amet nulla facilisi. Et molestie ac feugiat sed lectus vestibulum mattis ullamcorper
+                    velit.
+                    Ut aliquam purus sit amet luctus. Consequat mauris nunc congue nisi. Quisque non tellus orci ac
+                    auctor
+                    augue mauris augue.
+
+                    Sit amet justo donec enim diam. Sapien pellentesque habitant morbi tristique senectus et netus.
+                    Varius
+                    quam quisque id diam vel quam elementum pulvinar. Placerat in egestas erat imperdiet sed euismod
+                    nisi
+                    porta. Aenean vel elit scelerisque mauris pellentesque. Amet justo donec enim diam. At ultrices mi
+                    tempus imperdiet nulla. Viverra nam libero justo laoreet sit amet cursus sit amet. Non quam lacus
+                    suspendisse faucibus interdum posuere lorem. Nunc congue nisi vitae suscipit tellus mauris. Faucibus
+                    ornare suspendisse sed nisi lacus sed. Phasellus faucibus scelerisque eleifend donec pretium.
+                    Vulputate
+                    dignissim suspendisse in est ante in nibh mauris.
+
+                    Consectetur adipiscing elit duis tristique sollicitudin nibh sit. Mauris a diam maecenas sed enim ut
+                    sem
+                    viverra aliquet. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Neque
+                    volutpat
+                    ac tincidunt vitae semper quis lectus nulla at. Pulvinar sapien et ligula ullamcorper malesuada
+                    proin
+                    libero nunc consequat. Elementum eu facilisis sed odio morbi quis. In hendrerit gravida rutrum
+                    quisque
+                    non. In nisl nisi scelerisque eu ultrices vitae. Enim praesent elementum facilisis leo vel fringilla
+                    est
+                    ullamcorper. Donec et odio pellentesque diam. Sed pulvinar proin gravida hendrerit lectus. Et magnis
+                    dis
+                    parturient montes nascetur. Eu feugiat pretium nibh ipsum consequat. Eget duis at tellus at urna
+                    condimentum mattis. Cras adipiscing enim eu turpis egestas. Integer malesuada nunc vel risus commodo
+                    viverra. Velit dignissim sodales ut eu sem integer vitae justo. Sed nisi lacus sed viverra.
+
+                    Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Donec pretium vulputate sapien
+                    nec
+                    sagittis. Eget mi proin sed libero enim sed faucibus turpis. Nam aliquam sem et tortor consequat id
+                    porta. Nulla pellentesque dignissim enim sit amet venenatis urna. Phasellus faucibus scelerisque
+                    eleifend donec. Sit amet nisl suscipit adipiscing bibendum est. Sit amet risus nullam eget felis
+                    eget
+                    nunc lobortis mattis. Sit amet purus gravida quis blandit turpis. Viverra adipiscing at in tellus
+                    integer feugiat scelerisque varius. Amet consectetur adipiscing elit pellentesque habitant morbi
+                    tristique senectus. Volutpat odio facilisis mauris sit amet massa vitae tortor condimentum. Faucibus
+                    purus in massa tempor. Consectetur libero id faucibus nisl tincidunt. Purus semper eget duis at
+                    tellus
+                    at. Donec et odio pellentesque diam volutpat commodo. Suscipit adipiscing bibendum est ultricies
+                    integer
+                    quis.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal mention legale-->
+<div class="modal fade" id="ml" tabindex="-1" role="dialog" aria-labelledby="ml" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mltittle">Mentions Légales</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Ut tellus
+                    elementum
+                    sagittis vitae et leo. Eget dolor morbi non arcu risus quis varius quam. Diam maecenas ultricies mi
+                    eget
+                    mauris pharetra et. Libero enim sed faucibus turpis in eu mi. Et odio pellentesque diam volutpat
+                    commodo. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Dignissim suspendisse in
+                    est
+                    ante in nibh mauris cursus. Leo duis ut diam quam nulla porttitor massa id neque. Et ligula
+                    ullamcorper
+                    malesuada proin libero nunc consequat interdum varius. Posuere lorem ipsum dolor sit. Malesuada
+                    bibendum
+                    arcu vitae elementum curabitur vitae nunc sed velit.
+
+                    Consectetur adipiscing elit duis tristique sollicitudin. Fusce id velit ut tortor pretium viverra.
+                    Lorem
+                    ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Augue neque gravida in fermentum.
+                    Faucibus
+                    scelerisque eleifend donec pretium vulputate sapien. Lacinia quis vel eros donec ac odio tempor. Eu
+                    consequat ac felis donec et odio. Ac placerat vestibulum lectus mauris ultrices eros in cursus
+                    turpis.
+                    Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Leo integer malesuada nunc
+                    vel
+                    risus. Pretium quam vulputate dignissim suspendisse in. Accumsan tortor posuere ac ut. Tempor
+                    commodo
+                    ullamcorper a lacus vestibulum sed arcu non odio.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrdQ3BtU1ccLPCVgDywz7JGGM93g5MlN8&callback=initMap">
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="../library/JS/main.js"></script>
+<script src="../library/JS/maps.js"></script>
+
+</body>
+</html>
